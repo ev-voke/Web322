@@ -4,9 +4,7 @@
 * assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students.
 *
-* Name: Jasdeep Sandhu      Student ID: 121190151       Date: January 1, 2018
-*
-* Online (Heroku) Link: https://powerful-chamber-61258.herokuapp.com/
+* Name: Jasdeep Sandhu          Date: January 1, 2018
 *
 **********************************************************************************/
 
