@@ -4,9 +4,7 @@
 * assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students
 *
-* Name: Jasdeep Sandhu      Student ID: 121190151       Date: October 1, 2017
-*
-* Online (Heroku) Link: https://arcane-plateau-33601.herokuapp.com/
+* Name: Jasdeep Sandhu          Date: October 1, 2017
 *
 ********************************************************************************/ 
 
