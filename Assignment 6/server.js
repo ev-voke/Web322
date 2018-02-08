@@ -4,9 +4,7 @@
 * assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students.
 *
-* Name: Jasdeep Sandhu      Student ID: 121190151       Date: December 19, 2017
-*
-* Online (Heroku) Link: https://ancient-escarpment-98878.herokuapp.com/
+* Name: Jasdeep Sandhu          Date: December 19, 2017
 *
 **********************************************************************************/
 
