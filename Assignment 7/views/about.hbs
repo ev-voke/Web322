@@ -1,0 +1,125 @@
+<div class="row">
+		<section class="main col-md-12">
+			<article>
+			<h2>Jasdeep Sandhu - The Developer</h2>
+			<p>Hello, thank you for visiting my site! I'm a student currently attending my second year at 
+				Seneca College. I'm hoping to get a stable job when I graduate. I'd like to work and live 
+				in an apartment in downtown toronto. I dream of also owning one or two Scottish Folds (cats)
+				to keep during that time. If not I may move to Calgary or Edmonton to buy a house in a much more
+				open area with forests and grassland. This is all for the purpose of allowing my four year old
+				german shepherd to live more openly and free till the day he passes. If those both fail I wish 
+				to move to Japan and work as a teacher or programmer. I think I have myself pretty covered haha.
+			</p>
+			</article>
+		</section>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>Leave a Comment</h3>
+		<div class="well">
+			<div class="row">
+				<div class="col-md-12">
+					<form method="post" action="/about/addComment">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input class="form-control" id="authorName" name="authorName" type="text" placeholder="Name" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input class="form-control" id="authorEmail" name="authorEmail" type="email" placeholder="Email" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input class="form-control" id="subject" name="subject" type="text" placeholder="Subject" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea name="commentText" class="form-control" placeholder="Comment" rows="5"></textarea>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary pull-right">Comment</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{#if data}}
+	<div class="row">
+		<div class="col-md-12">
+			<h3>All Comments</h3>
+			<hr />
+		</div>
+	</div>
+{{/if}}
+{{#each data}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4>{{subject}}</h4>
+			<div class="well">
+				<div class="row">
+					<div class="col-md-12">
+						{{commentText}}<br /><br />
+						Posted on: {{postedDate}} by <a href="mailto:{{email}}">{{authorName}}</a><br /><br />
+					</div>
+				</div>
+				{{#each replies}}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="well">
+								{{commentText}}<br /><br />
+								Posted on: {{repliedDate}} by <a href="mailto:{{email}}">{{authorName}}</a><br /><br />
+							</div>
+						</div>
+					</div>
+				{{/each}}
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-primary btn-sm pull-right" data-toggle="collapse" data-target="#reply{{_id}}" aria-expanded="false">Reply</button>
+						</div>
+					</div>
+			</div>
+
+			<div class="collapse" id="reply{{_id}}">
+				<div class="well">
+					<div class="row">
+						<div class="col-md-12">
+							<form method="post" action="/about/addReply">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input class="form-control" id="authorName" name="authorName" type="text" placeholder="Name" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input class="form-control" id="authorEmail" name="authorEmail" type="email" placeholder="Email" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea name="commentText" id="commentText" class="form-control" placeholder="Comment" rows="5"></textarea>
+										</div>
+									</div>
+								</div>
+								<input id="comment_id" name="comment_id" type="hidden" value="{{_id}}" />
+								<button type="submit" class="btn btn-primary pull-right">Reply</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{/each}}
