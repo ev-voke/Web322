@@ -4,9 +4,7 @@
 * of this assignment has been copied manually or electronically from any other source
 * (including 3rd party web sites) or distributed to other students.
 *
-* Name: Jasdeep Sandhu      Student ID: 121190151       Date: September 21, 2017
-*
-* Online (Heroku) Link: https://stormy-ocean-52927.herokuapp.com/
+* Name: Jasdeep Sandhu          Date: September 21, 2017
 *
 ********************************************************************************/
 
